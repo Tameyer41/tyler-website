@@ -1,113 +1,186 @@
-import Image from 'next/image'
+"use client";
+
+import Link from "next/link";
+import HeaderComponent from "../components/Header";
+import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
+    <main className="flex flex-col bg-white">
+      <HeaderComponent />
+      <div className="relative h-[60px] md:h-[72px]"></div>
+      <div className="max-w-7xl mx-auto p-8 xl:px-24 flex flex-col gap-y-8">
+        <p className="py-16 text-gray-600 text-[20px] leading-relaxed font-normal max-w-xl">
+          Software Engineer with a passion for building delightful user
+          interfaces. Front-end focused, but full-stack capable.
         </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+        <p className="text-base text-gray-600 font-normal max-w-xl">
+          Selected projects
+        </p>
+        <div className="flex flex-col gap-y-6 pb-[72px]">
+          <div className="max-h-[800px] flex aspect-video h-full w-full">
+            <div className="bg-[#F7F7FA] flex h-full w-full rounded-lg p-8">
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -40 }}
+                transition={{
+                  duration: 0.95,
+                  ease: [0.165, 0.84, 0.44, 1],
+                }}
+                className="flex h-full w-full"
+              >
+                <Image
+                  src="/marketing/LiftoffDashboard.webp"
+                  alt="Liftoff Dashboard"
+                  height={800}
+                  width={1440}
+                  className="rounded-lg w-full object-contain"
+                />
+              </motion.div>
+            </div>
+          </div>
+          <div className="flex flex-col gap-y-2">
+            <p className="text-base text-gray-600 font-normal">2023</p>
+            <div className="flex flex-col gap-y-1">
+              <p className="text-lg text-black font-semibold">
+                Liftoff — Experiential Demo
+              </p>
+              <p className="text-base text-gray-600 font-normal max-w-3xl">
+                Moving the {`"`}ah-ha{`"`} moment closer to the user. Built with
+                NextJS and TailwindCSS. Transcoding with FFmpeg, transcription
+                with Whisper.
+              </p>
+              <div className="pt-4 flex items-center gap-x-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="w-4 h-4"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.466 7.89l.813-2.846A.75.75 0 019 4.5zM18 1.5a.75.75 0 01.728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 010 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 01-1.456 0l-.258-1.036a2.625 2.625 0 00-1.91-1.91l-1.036-.258a.75.75 0 010-1.456l1.036-.258a2.625 2.625 0 001.91-1.91l.258-1.036A.75.75 0 0118 1.5zM16.5 15a.75.75 0 01.712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 010 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 01-1.422 0l-.395-1.183a1.5 1.5 0 00-.948-.948l-1.183-.395a.75.75 0 010-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0116.5 15z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+
+                <Link
+                  href="https://demo.useliftoff.com/"
+                  target="_blank"
+                  className="underline text-base text-gray-600 font-normal"
+                >
+                  View live demo
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col gap-y-6 pb-[72px]">
+          <div className="max-h-[800px] flex aspect-video h-full w-full">
+            <div className="bg-[#F7F7FA] flex h-full w-full rounded-lg p-8">
+              <img
+                src="/marketing/LiftoffWebApp.webp"
+                className="rounded-lg w-full object-contain"
+              />
+            </div>
+          </div>
+          <div className="flex flex-col gap-y-2">
+            <p className="text-base text-gray-600 font-normal">2023</p>
+            <div className="flex flex-col gap-y-1">
+              <p className="text-lg text-black font-semibold">
+                Liftoff — AI Feedback Platform
+              </p>
+              <p className="text-base text-gray-600 font-normal max-w-3xl">
+                Full-stack web application for AI feedback on mock tech
+                interviews. NextJS/Postgres/Redis.
+              </p>
+              <div className="pt-4 flex items-center gap-x-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="w-4 h-4"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.466 7.89l.813-2.846A.75.75 0 019 4.5zM18 1.5a.75.75 0 01.728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 010 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 01-1.456 0l-.258-1.036a2.625 2.625 0 00-1.91-1.91l-1.036-.258a.75.75 0 010-1.456l1.036-.258a2.625 2.625 0 001.91-1.91l.258-1.036A.75.75 0 0118 1.5zM16.5 15a.75.75 0 01.712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 010 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 01-1.422 0l-.395-1.183a1.5 1.5 0 00-.948-.948l-1.183-.395a.75.75 0 010-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0116.5 15z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+
+                <Link
+                  href="https://useliftoff.com/"
+                  target="_blank"
+                  className="underline text-base text-gray-600 font-normal"
+                >
+                  View the site
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col gap-y-6 pb-[72px]">
+          <div className="max-h-[800px] flex aspect-video h-full w-full">
+            <div className="bg-[#F7F7FA] flex h-full w-full rounded-lg p-8">
+              <img
+                src="/marketing/BundlDashboard.webp"
+                className="rounded-lg w-full object-contain"
+              />
+            </div>
+          </div>
+          <div className="flex flex-col gap-y-2">
+            <p className="text-base text-gray-600 font-normal">2021</p>
+            <div className="flex flex-col gap-y-1">
+              <p className="text-lg text-black font-semibold">
+                Bundl Marketing
+              </p>
+              <p className="text-base text-gray-600 font-normal max-w-3xl">
+                Micro-influencer marketplace that reached 50+ million on
+                Instagram. 100+ screens, custom RubyGems, Machine Learning for
+                recommendations.
+              </p>
+              <div className="pt-4 flex items-center gap-x-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="w-4 h-4"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.466 7.89l.813-2.846A.75.75 0 019 4.5zM18 1.5a.75.75 0 01.728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 010 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 01-1.456 0l-.258-1.036a2.625 2.625 0 00-1.91-1.91l-1.036-.258a.75.75 0 010-1.456l1.036-.258a2.625 2.625 0 001.91-1.91l.258-1.036A.75.75 0 0118 1.5zM16.5 15a.75.75 0 01.712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 010 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 01-1.422 0l-.395-1.183a1.5 1.5 0 00-.948-.948l-1.183-.395a.75.75 0 010-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0116.5 15z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+
+                <Link
+                  href="#"
+                  className="underline text-base text-gray-600 font-normal"
+                >
+                  See the code
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col gap-y-6 py-32">
+          <p className="text-base text-gray-600 font-normal max-w-xl">
+            Thanks for checking my portfolio out!
+          </p>
+          <p className="text-base text-gray-600 font-normal max-w-xl">
+            You can find reach me at{" "}
+            <span className="underline">
+              {" "}
+              <Link href="mailto:tameyer41@gmail.com">
+                tyler@useliftoff.com
+              </Link>
+            </span>{" "}
+            if you{`'`}d like to get in touch.
+          </p>
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
     </main>
-  )
+  );
 }
