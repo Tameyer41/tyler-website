@@ -34,8 +34,8 @@ export default function Home() {
                 <Image
                   src="/marketing/LiftoffDashboard.webp"
                   alt="Liftoff Dashboard"
-                  height={800}
-                  width={1440}
+                  height={1501}
+                  width={1920}
                   className="rounded-lg w-full object-contain"
                 />
               </motion.div>
@@ -80,8 +80,11 @@ export default function Home() {
         <div className="flex flex-col gap-y-6 pb-[72px]">
           <div className="max-h-[800px] flex aspect-video h-full w-full">
             <div className="bg-[#F7F7FA] flex h-full w-full rounded-lg p-8">
-              <img
+              <Image
                 src="/marketing/LiftoffWebApp.webp"
+                alt="Liftoff Web App"
+                height={1551}
+                width={1920}
                 className="rounded-lg w-full object-contain"
               />
             </div>
@@ -124,8 +127,11 @@ export default function Home() {
         <div className="flex flex-col gap-y-6 pb-[72px]">
           <div className="max-h-[800px] flex aspect-video h-full w-full">
             <div className="bg-[#F7F7FA] flex h-full w-full rounded-lg p-8">
-              <img
+              <Image
                 src="/marketing/BundlDashboard.webp"
+                alt="Bundl Dashboard"
+                height={1551}
+                width={1920}
                 className="rounded-lg w-full object-contain"
               />
             </div>

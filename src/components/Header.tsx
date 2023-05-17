@@ -80,9 +80,6 @@ export default function HeaderComponent() {
           Tyler Meyer
         </Link>
         <div className="flex flex-row items-center justify-center gap-x-8">
-          <Link href="#" className="text-[15px] font-normal text-gray-600">
-            Resume
-          </Link>
           <Link
             href="https://github.com/Tameyer41"
             target="_blank"
