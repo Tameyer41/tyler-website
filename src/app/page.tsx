@@ -10,7 +10,7 @@ export default function Home() {
     <main className="flex flex-col bg-white">
       <HeaderComponent />
       <div className="relative h-[60px] md:h-[72px]"></div>
-      <div className="max-w-7xl mx-auto p-8 xl:px-24 flex flex-col gap-y-8">
+      <div className="max-w-7xl mx-auto w-full p-8 xl:px-24 flex flex-col gap-y-8">
         <p className="py-16 text-gray-600 text-[20px] leading-relaxed font-normal max-w-xl">
           Software Engineer with a passion for building delightful user
           interfaces. Front-end focused, but full-stack capable.
@@ -50,7 +50,7 @@ export default function Home() {
               <p className="text-base text-gray-600 font-normal max-w-3xl">
                 Moving the {`"`}ah-ha{`"`} moment closer to the user. Built with
                 NextJS and TailwindCSS. Transcoding with FFmpeg, transcription
-                with Whisper.
+                with Whisper, feedback with OpenAI.
               </p>
               <div className="pt-4 flex items-center gap-x-2">
                 <svg
@@ -97,7 +97,8 @@ export default function Home() {
               </p>
               <p className="text-base text-gray-600 font-normal max-w-3xl">
                 Full-stack web application for AI feedback on mock tech
-                interviews. NextJS/Postgres/Redis.
+                interviews. Built with NextJS/TailwindCSS/Postgres and Redis for
+                rate-limiting.
               </p>
               <div className="pt-4 flex items-center gap-x-2">
                 <svg
@@ -143,9 +144,10 @@ export default function Home() {
                 Bundl Marketing
               </p>
               <p className="text-base text-gray-600 font-normal max-w-3xl">
-                Micro-influencer marketplace that reached 50+ million on
-                Instagram. 100+ screens, custom RubyGems, Machine Learning for
-                recommendations.
+                Micro-influencer marketplace with a creator audience reach of
+                50+ million Instagram users. Built with Ruby/Postgres/Redis.
+                Project included 100+ screens, custom RubyGems, Machine Learning
+                for recommendations.
               </p>
               <div className="pt-4 flex items-center gap-x-2">
                 <svg
