@@ -1,8 +1,8 @@
 import "./globals.css";
 
 export const metadata = {
-  title: `Tyler${`'`}s personal website`,
-  description: "Portfolio for Tyler Meyer",
+  title: `Tyler Meyer`,
+  description: "The portfolio for Software Engineer Tyler Meyer",
 };
 
 export default function RootLayout({
