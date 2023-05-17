@@ -144,10 +144,10 @@ export default function Home() {
                 Bundl Marketing
               </p>
               <p className="text-base text-gray-600 font-normal max-w-3xl">
-                Micro-influencer marketplace with a creator audience reach of
-                50+ million Instagram users. Built with Ruby/Postgres/Redis.
-                Project included 100+ screens, custom RubyGems, Machine Learning
-                for recommendations.
+                Influencer marketplace with a total audience reach of 50+
+                million users. Built with Ruby/Postgres/Redis. Project included
+                100+ screens, custom RubyGems, Machine Learning for
+                recommendations.
               </p>
               <div className="pt-4 flex items-center gap-x-2">
                 <svg
@@ -164,10 +164,11 @@ export default function Home() {
                 </svg>
 
                 <Link
-                  href="#"
+                  href="https://drive.google.com/drive/u/0/folders/1OGRi1s1pMQ0cmhMYMPl0yJNI5Yt3c3fG"
+                  target="_blank"
                   className="underline text-base text-gray-600 font-normal"
                 >
-                  See the code
+                  See more images
                 </Link>
               </div>
             </div>
