@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 export const metadata = {
@@ -15,6 +16,7 @@ export default function RootLayout({
       <body className="scroll-smooth antialiased [font-feature-settings:'ss01'] font-soehne">
         {children}
       </body>
+      <Analytics />
     </html>
   );
 }
